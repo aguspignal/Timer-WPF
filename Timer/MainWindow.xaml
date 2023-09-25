@@ -1,0 +1,142 @@
+﻿<Window x:Class="Timer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Timer"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock  Grid.Column="2" 
+                VerticalAlignment="Center" 
+                HorizontalAlignment="Center" 
+                FontWeight="DemiBold" 
+                FontSize="18"
+                Text="Timer" />
+        
+        <!-- HOURs -->
+        <TextBlock  x:Name="HoursValue"
+                Grid.Row="1"
+                Grid.Column="1"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"
+                FontSize="36"
+                FontWeight="Bold"
+                Text= "00" />
+
+        <TextBlock  Grid.Row="1"
+                Grid.Column="1"
+                VerticalAlignment="Bottom"
+                HorizontalAlignment="Center"
+                FontSize="16"
+                Text="Hours" />
+
+        <ComboBox Name="HoursCombox"
+                  Grid.Row="2" 
+                  Grid.Column="1"
+                  VerticalAlignment="Top"
+                  Width="60" 
+                  Height="35"
+                  VerticalContentAlignment="Center"    
+                  FontSize="16"/>
+
+        <!-- MINUTEs -->
+        <TextBlock  Name="MinutesValue"
+                Grid.Row="1"
+                Grid.Column="2"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"
+                FontSize="36"
+                FontWeight="Bold"
+                Text="00"/>
+
+        <TextBlock  Grid.Row="1"
+                Grid.Column="2"
+                VerticalAlignment="Bottom"
+                HorizontalAlignment="Center"
+                FontSize="16"
+                Text="Minutes" />
+
+        <ComboBox Name="MinutesCombox"
+                  Grid.Row="2" 
+                  Grid.Column="2"
+                  VerticalAlignment="Top"
+                  Width="60" 
+                  Height="35"
+                  VerticalContentAlignment="Center"    
+                  FontSize="16"/>
+
+        <!-- SECONDs -->
+        <TextBlock  Name="SecondsValue"
+                Grid.Row="1"
+                Grid.Column="3"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"
+                FontSize="36"
+                FontWeight="Bold"
+                Text="00"/>
+
+        <TextBlock  Grid.Row="1"
+                Grid.Column="3"
+                VerticalAlignment="Bottom"
+                HorizontalAlignment="Center"
+                FontSize="16"
+                Text="Seconds" />
+
+        <ComboBox Name="SecondsCombox"
+                  Grid.Row="2" 
+                  Grid.Column="3"
+                  VerticalAlignment="Top"
+                  Width="60" 
+                  Height="35"
+                  VerticalContentAlignment="Center"    
+                  FontSize="16"/>
+
+        <!-- BUTTONs -->
+        <Button x:Name="SetBtn"
+            Grid.Row="2"
+            Grid.Column="1"
+            Grid.ColumnSpan="2"
+            VerticalAlignment="Bottom"
+            Width="60"
+            Height="30"
+            Content="Set time"
+            Click="SetTime"/>
+        
+        <Button x:Name="StartBtn"
+            Grid.Row="2"
+            Grid.Column="2"
+            Grid.ColumnSpan="2"
+            VerticalAlignment="Bottom"
+            Width="60"
+            Height="30"
+            Content="Start"
+            Click="StartTimer"
+            IsEnabled="True"/>
+        
+        <Button x:Name="StopBtn"
+            Grid.Row="2"
+            Grid.Column="3"
+            VerticalAlignment="Bottom"
+            Width="60"
+            Height="30"
+            Content="Stop"
+            Click="StopTimer"
+            IsEnabled="False"/>
+
+    </Grid>
+</Window>
